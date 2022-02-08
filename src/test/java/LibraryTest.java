@@ -22,6 +22,14 @@ public class LibraryTest {
         library.addBook(book);
         assertEquals(1, library.countBooks());
     }
+
+    @Test
+    public void canRemoveBook(){
+        library.addBook(book);
+        library.addBook(book);
+        library.removeBook();
+        assertEquals(1, library.countBooks() );
+    }
     @Test
     public void canHaveCapacity(){
         assertEquals(50, library.getCapacity());
@@ -29,8 +37,9 @@ public class LibraryTest {
 
     @Test
     public void canAddToStock(){
-        assertEquals(true, library.chechStock());
+        assertEquals(true, library.checkStock());
     }
+
 
     @Test
     public void cannotAddToStock(){
@@ -38,7 +47,7 @@ public class LibraryTest {
         library.addBook(book);
         library.addBook(book);
         library.addBook(book);
-        assertEquals(false,library.chechStock());
+        assertEquals(false,library.checkStock());
     }
 
 

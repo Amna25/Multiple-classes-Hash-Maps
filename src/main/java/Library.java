@@ -18,14 +18,20 @@ public class Library {
         this.books.add(book);
     }
 
+    public Book removeBook(){
+        return this.books.remove(0);
+    }
+
     public int getCapacity() {
         return this.capacity;
     }
 
-    public Boolean chechStock() {
+    public Boolean checkStock() {
      if(countBooks() < this.capacity){
          return true;
         }
          return false;
     }
+
+
 }
